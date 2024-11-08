@@ -5,67 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auxílio para Estudo</title>
     <style>
-        /* Estilo básico do corpo */
+        /* Estilo do corpo com cores mais profissionais */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #4e8684;
+            background-color: #f4f6f7;
+            color: #333;
         }
         .container {
             max-width: 800px;
             margin: auto;
-            background: rgb(48, 155, 163);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s;
+        }
+        .container:hover {
+            transform: scale(1.02); /* Suave aumento ao passar o mouse */
         }
         h1 {
             text-align: center;
-            color: #0ec5e6;
+            color: #1a73e8;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
         }
         .site {
             display: flex;
             align-items: center;
             margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #53528b;
-            border-radius: 5px;
-            background-color: #9298a1;
-            transition: transform 0.3s, box-shadow 0.3s; /* Adicionando transição */
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: slideInUp 0.8s ease forwards;
+            animation-delay: calc(0.1s * var(--i));
         }
         .site:hover {
-            transform: translateY(-5px); /* Eleva o item ao passar o mouse */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            background-color: #f1f4f9;
         }
         .site img {
-            max-width: 80px;
-            margin-right: 20px;
+            max-width: 70px;
+            margin-right: 15px;
+            border-radius: 5px;
         }
         h2 {
             margin: 0;
-            color: #ff2ab8;
+            color: #3a6ea5;
         }
         a {
             text-decoration: none;
-            color: #e60e0e;
+            color: #1a73e8;
+            font-weight: bold;
         }
         a:hover {
-            text-decoration: underline;
+            color: #0056b3;
         }
         p {
-            color: #251f1f;
+            margin: 5px 0 0;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        /* Animações */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
 
-
 <div class="container">
     <h1>Auxílio para Estudo</h1>
 
-
-    <div class="site">
+    <div class="site" style="--i: 1;">
         <img src="https://play-lh.googleusercontent.com/TpK0AcjPn5-XDKgSZ5jAob1H7MsQuJILOMR4M4QYkTt5CBPgTJVr7mysrKM6Ia8SrX8" alt="Logo da Khan Academy">
         <div>
             <h2><a href="https://pt.khanacademy.org/" target="_blank">Khan Academy</a></h2>
@@ -73,8 +109,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 2;">
         <img src="https://yt3.googleusercontent.com/5TjlI6nK7bU8ZORSy8q7ODI0pcdcvN7Vn7-lqnhO-AlscJgTL0GGyVtNdvFCvMIv5wKfeMdRyQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo do Descomplica">
         <div>
             <h2><a href="https://descomplica.com.br/" target="_blank">Descomplica</a></h2>
@@ -82,8 +117,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 3;">
         <img src="https://www.abcdacomunicacao.com.br/wp-content/uploads/uol.png" alt="Logo do Estude (UOL)">
         <div>
             <h2><a href="https://www.estude.com.br/" target="_blank">Estude (UOL)</a></h2>
@@ -91,8 +125,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 4;">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="Logo do YouTube">
         <div>
             <h2><a href="https://www.youtube.com/" target="_blank">YouTube</a></h2>
@@ -100,8 +133,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 5;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu9WnFXcd4sn2mCY64d2QwI_qOTZye2OL-pw&s" alt="Logo do Codecademy">
         <div>
             <h2><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></h2>
@@ -109,8 +141,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 6;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Ck7SW95bYVA8AnNRRTSS6-hK_29IGHuqmQ&s" alt="Logo do Coursera">
         <div>
             <h2><a href="https://www.coursera.org/" target="_blank">Coursera</a></h2>
@@ -118,8 +149,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 7;">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ffvle8jxcJgU4Wd0Uj1rsdVy6bWG3hcx6A&s" alt="Logo do edX">
         <div>
             <h2><a href="https://www.edx.org/" target="_blank">edX</a></h2>
@@ -127,8 +157,7 @@
         </div>
     </div>
 
-
-    <div class="site">
+    <div class="site" style="--i: 8;">
         <img src="https://t.ctcdn.com.br/se7AX_Veg-5FljpAkWBIMK1duks=/1024x576/smart/i354687.jpeg" alt="Logo do OpenAI">
         <div>
             <h2><a href="https://www.openai.com/" target="_blank">OpenAI</a></h2>
@@ -136,14 +165,7 @@
         </div>
     </div>
 
-
 </div>
-
 
 </body>
 </html>
-
-
-
-
-
